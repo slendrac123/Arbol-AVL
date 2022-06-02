@@ -39,7 +39,7 @@ class ArbolAVL:
 
 				if n.valor!=None:       
 					buf=' '*((5-len(str(n.valor)))/2)
-					fila_act+='%s%s%s'%(buf,str(n.valor),buf)+sep
+					fila_act+="{a}{b}{c}".format(a=buf,b=str(n.valor),c=buf)+sep
 				else:
 					fila_act+=' '*5+sep
 
@@ -174,7 +174,7 @@ class ArbolAVL:
 				if nodo_padre.hijo_izquierdo==nodo:
 					nodo_padre.hijo_izquierdo=None
 				else:
-					nodo_padre.hijo_izquierdo=None
+					nodo_padre.hijo_derecho=None
 			else:
 				self.raiz=None
 
